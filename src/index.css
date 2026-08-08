@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-obsidian text-cream font-body antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    @apply bg-copper text-obsidian;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #c9a14a 0%, #f5e6c8 40%, #b87333 70%, #c9a14a 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .text-copper-glow {
+    text-shadow: 0 0 30px rgba(184, 115, 51, 0.4), 0 0 60px rgba(184, 115, 51, 0.2);
+  }
+
+  .bg-glass-dark {
+    background: rgba(26, 15, 10, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .bg-glass-card {
+    background: linear-gradient(145deg, rgba(30, 24, 19, 0.85), rgba(10, 7, 5, 0.9));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .copper-texture {
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(184, 115, 51, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(201, 161, 74, 0.06) 0%, transparent 50%);
+  }
+
+  .ottoman-pattern {
+    background-image:
+      repeating-conic-gradient(rgba(201, 161, 74, 0.03) 0% 25%, transparent 0% 50%);
+    background-size: 60px 60px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hero-vignette {
+    background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(10, 7, 5, 0.7) 80%, rgba(10, 7, 5, 0.95) 100%);
+  }
+}
