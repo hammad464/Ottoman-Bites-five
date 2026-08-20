@@ -96,7 +96,7 @@ export default function Navbar() {
               )}
             </button>
 
-            {/* Direct WhatsApp / Call buttons */}
+            {/* Direct WhatsApp button */}
             <a
               href={businessInfo.whatsappUrl}
               target="_blank"
@@ -105,14 +105,6 @@ export default function Navbar() {
             >
               <Send className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
-            </a>
-
-            <a
-              href={`tel:${businessInfo.phone1}`}
-              className="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-copper/30 text-xs text-cream/80 hover:text-brass hover:border-brass transition-all"
-            >
-              <Phone className="w-3.5 h-3.5 text-copper" />
-              <span>Call</span>
             </a>
 
             {/* Mobile Menu Hamburger */}

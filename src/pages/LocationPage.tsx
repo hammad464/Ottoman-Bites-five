@@ -101,46 +101,49 @@ export default function LocationPage() {
             <div className="bg-glass-card rounded-2xl p-6 border border-copper/20 hover:border-copper/40 transition-all">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-copper/15 border border-copper/30 flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-brass" />
+                  <Send className="w-6 h-6 text-brass" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-cream font-semibold mb-1">Call & WhatsApp</h3>
-                  <p className="text-xs text-cream/50 font-body">Direct order line & inquiries</p>
+                  <h3 className="font-serif text-lg text-cream font-semibold mb-1">Direct WhatsApp & Orders</h3>
+                  <p className="text-xs text-cream/50 font-body">Instant response & doorstep dispatch</p>
                 </div>
               </div>
 
               <div className="space-y-2.5">
                 <a
-                  href={`tel:${businessInfo.phone1}`}
-                  className="flex items-center justify-between p-3 rounded-xl bg-obsidian/70 border border-copper/20 hover:border-brass/40 text-xs sm:text-sm text-cream hover:text-brass transition-all font-body"
-                >
-                  <span className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-copper" /> Hotline 1
-                  </span>
-                  <span className="font-mono font-bold text-brass">{businessInfo.phone1}</span>
-                </a>
-
-                <a
-                  href={`tel:${businessInfo.phone2}`}
-                  className="flex items-center justify-between p-3 rounded-xl bg-obsidian/70 border border-copper/20 hover:border-brass/40 text-xs sm:text-sm text-cream hover:text-brass transition-all font-body"
-                >
-                  <span className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-copper" /> Hotline 2
-                  </span>
-                  <span className="font-mono font-bold text-brass">{businessInfo.phone2}</span>
-                </a>
-
-                <a
                   href={businessInfo.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3 rounded-xl bg-emerald-950/50 border border-emerald-600/40 hover:bg-emerald-900/60 text-xs sm:text-sm text-emerald-300 font-body font-semibold transition-all"
+                  className="flex items-center justify-between p-3.5 rounded-xl bg-emerald-950/50 border border-emerald-600/40 hover:bg-emerald-900/60 text-xs sm:text-sm text-emerald-300 font-body font-semibold transition-all shadow-[0_0_15px_rgba(16,185,129,0.15)]"
                 >
                   <span className="flex items-center gap-2">
-                    <Send className="w-3.5 h-3.5 text-emerald-400" /> WhatsApp Orders
+                    <Send className="w-4 h-4 text-emerald-400" /> WhatsApp Orders
                   </span>
                   <span className="font-mono">{businessInfo.whatsappFormatted}</span>
                 </a>
+
+                {/* Mobile-only Call Options */}
+                <div className="space-y-2.5 md:hidden">
+                  <a
+                    href={`tel:${businessInfo.phone1}`}
+                    className="flex items-center justify-between p-3 rounded-xl bg-obsidian/70 border border-copper/20 hover:border-brass/40 text-xs sm:text-sm text-cream hover:text-brass transition-all font-body"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Phone className="w-3.5 h-3.5 text-copper" /> Hotline 1
+                    </span>
+                    <span className="font-mono font-bold text-brass">{businessInfo.phone1}</span>
+                  </a>
+
+                  <a
+                    href={`tel:${businessInfo.phone2}`}
+                    className="flex items-center justify-between p-3 rounded-xl bg-obsidian/70 border border-copper/20 hover:border-brass/40 text-xs sm:text-sm text-cream hover:text-brass transition-all font-body"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Phone className="w-3.5 h-3.5 text-copper" /> Hotline 2
+                    </span>
+                    <span className="font-mono font-bold text-brass">{businessInfo.phone2}</span>
+                  </a>
+                </div>
               </div>
             </div>
 

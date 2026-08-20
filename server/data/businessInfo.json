@@ -1,0 +1,35 @@
+{
+  "name": "Ottoman Bites",
+  "tagline": "The Empire's Feast · Eat Like A Sultan",
+  "rating": 4.9,
+  "reviewsCount": 22,
+  "phone1": "0313-2707666",
+  "phone2": "0314-6890004",
+  "whatsapp": "+923132707666",
+  "whatsappFormatted": "+92 313 2707666",
+  "whatsappUrl": "https://wa.me/923132707666",
+  "address": "Shops 47, 48, 49, Gate 1, Opposite Head Office, Al-Rehman Garden, Lahore",
+  "fullAddress": "Shops 47, 48, 49, Gate 1, Opposite Head Office, Al-Rehman Garden Phase 2, Lahore, Pakistan",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ottoman%20Bites&query_place_id=ChIJYfhsKZIdGTkRtGQMD2hAxns",
+  "hours": [
+    { "day": "Monday", "hours": "6:00 AM – 3:00 AM" },
+    { "day": "Tuesday", "hours": "6:00 PM – 2:30 AM" },
+    { "day": "Wednesday", "hours": "6:00 PM – 2:30 AM" },
+    { "day": "Thursday", "hours": "6:00 PM – 2:30 AM" },
+    { "day": "Friday", "hours": "6:00 PM – 2:30 AM" },
+    { "day": "Saturday", "hours": "6:00 PM – 2:30 AM" },
+    { "day": "Sunday", "hours": "6:00 PM – 2:30 AM" }
+  ],
+  "coordinates": {
+    "lat": 31.6005876,
+    "lng": 74.2338609
+  },
+  "heroImages": {
+    "burger": "https://images.pexels.com/photos/28828554/pexels-photo-28828554.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1600",
+    "lamps": "https://images.pexels.com/photos/13143743/pexels-photo-13143743.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1600",
+    "chef": "https://images.pexels.com/photos/24205183/pexels-photo-24205183.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1600",
+    "arches": "https://images.pexels.com/photos/14399173/pexels-photo-14399173.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1600",
+    "spices": "https://images.pexels.com/photos/301669/pexels-photo-301669.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1600",
+    "feast": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80"
+  }
+}
