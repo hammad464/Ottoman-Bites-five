@@ -28,13 +28,12 @@ app.use((req, res, next) => {
   next()
 })
 
-// Root API Endpoint
-app.get('/api', (req, res) => {
+// Root & /api Endpoints
+const rootHandler = (req, res) => {
   res.json({
-    name: 'Ottoman Bites Imperial API & Backend Routing Gateway',
+    name: 'Ottoman Bites Imperial Backend API',
+    status: 'online',
     version: '2.0.0',
-    status: 'active',
-    documentation: '/design-system',
     endpoints: {
       health: '/api/health',
       menu: '/api/menu',
@@ -44,14 +43,12 @@ app.get('/api', (req, res) => {
       reviews: '/api/reviews',
       businessInfo: '/api/info',
       orders: '/api/orders',
-      designSystem: '/api/design-system',
-      designSystemTokens: '/api/design-system/tokens',
-      designSystemColors: '/api/design-system/colors',
-      designSystemTypography: '/api/design-system/typography',
-      designSystemComponents: '/api/design-system/components'
     }
   })
-})
+}
+
+app.get('/', rootHandler)
+app.get('/api', rootHandler)
 
 // Mount Routes
 app.use('/api/health', healthRoutes)
@@ -80,15 +77,14 @@ app.use((err, req, res, next) => {
   })
 })
 
-// Start Server
-app.listen(PORT, () => {
+// Start Server - Bind explicitly to 0.0.0.0 for Render / Cloud compatibility
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n=================================================`)
   console.log(`  👑 OTTOMAN BITES BACKEND API SERVER RUNNING`)
-  console.log(`  🚀 Port: http://localhost:${PORT}`)
-  console.log(`  🎨 Design System: http://localhost:${PORT}/api/design-system`)
-  console.log(`  🍽️  Menu API: http://localhost:${PORT}/api/menu`)
-  console.log(`  ⭐ Reviews API: http://localhost:${PORT}/api/reviews`)
-  console.log(`  📍 Info API: http://localhost:${PORT}/api/info`)
+  console.log(`  🚀 Host: 0.0.0.0:${PORT}`)
+  console.log(`  🍽️  Menu API: /api/menu`)
+  console.log(`  ⭐ Reviews API: /api/reviews`)
+  console.log(`  📍 Info API: /api/info`)
   console.log(`=================================================\n`)
 })
 
